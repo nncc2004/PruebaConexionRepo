@@ -6,6 +6,9 @@
 	2.2 git init 
 	2.3 git remote add origin URL.git
 	2.4 git pull origin main (se verá sólo el .gitignore)
+	2.5 crear branch main en local:
+		2.5.1: git branch
+		2.5.2: git branch -M main
 
 3. Crear venv:
 	3.1 python -m venv venv
