@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}<!-- Bloque de Título --> {% endblock %}</title>
+</head>
+<body>
+
+    <main>
+        {% block content %}
+        <!-- Bloque de contenido -->
+        {% endblock %}
+    </main>
+    
+    <div class="botones">
+        <br><br><br>
+        <a href="{%url 'home'%}" class="button">Ir a Inicio</a>
+        <br>
+        <a href="{%url 'agregar_libro'%}" class="button">Ir a Agregar libros</a>
+        <br>
+        <a href="{%url 'lista_libros'%}" class="button">Ir a Ver libros</a>
+        <br>
+        <a href="{%url 'agregar_prestamo'%}" class="button">Ir a agregar préstamos</a>
+        <br>
+        <a href="{%url 'lista_prestamos'%}" class="button">Ir a ver préstamo</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}Lista de Préstamos{% endblock %}
+
+{% block content %}
+<h2>Lista de Préstamos</h2>
+<ul>
+    {% for prestamo in prestamos %}
+        <li>
+            {{ prestamo.id_prestamo }} - {{ prestamo.rut_socio }} -
+            {{ prestamo.libro.titulo }} -
+            {{ prestamo.fecha_inicio }} → {{ prestamo.fecha_termino }}
+        </li>
+    {% empty %}
+        <li>No hay préstamos registrados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

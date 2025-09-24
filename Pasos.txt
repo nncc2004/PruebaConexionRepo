@@ -1,0 +1,51 @@
+1. Crear repo en GITHUB
+	Notas: .gitignore para python
+
+2. Conectarme al repo:
+	2.1 Copiar link
+	2.2 git init 
+	2.3 git remote add origin URL.git
+	2.4 git pull origin main (se verá sólo el .gitignore)
+
+3. Crear venv:
+	3.1 python -m venv venv
+	3.2 venv\Scripts\activate
+	3.3 en .gitignore: venv/
+	3.4 pip install Django
+	3.5 pip freeze > requirements.txt
+
+4. Inicializar Django y app:
+	4.1 django-admin startproject config
+	4.2 django-admin startapp MiApp
+	4.3 settings.py: installed_apps = [..., 'MiApp']
+
+5. SetUp de MiApp
+	5.1 Crear urls.py en MiApp
+	5.2 en urls.py de config: path('', include('MiApp.urls')),
+	5.3 Crear /templates
+	5.4 Crear forms.py
+
+6. Crear el index.html base
+	6.1 Agergar el base dir en settings.py TEMPLATES 'DIRS' = [BASE_DIR / "templates"],
+	Nota: Copiar el código y explicar brevemente cómo funciona el concepto
+
+
+7. Crear Primera view + template + url
+	7.1 Crear la view que no hace nada
+	7.2 Crear la url a la view
+	7.3 Crear el template index.html
+
+8. Implementar BBDD:
+	8.1 pegar código en models.py
+	8.2 python manage.py makemigrations MiApp
+	8.3 python manage.py migrate
+
+9. Crear views para formularios libros:
+	Nota: Mostrar el forms.py!!!
+10. Crear views para ver los libros insertados.
+
+Misma lógica para los préstamos.
+
+AL FINAL, HACER GIT ADD, COMMIT Y PUSH PARA QUE VEAN!!!
+
+Total: 12 pasos (soy seco)
